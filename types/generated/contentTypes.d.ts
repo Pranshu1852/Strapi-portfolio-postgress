@@ -424,9 +424,13 @@ export interface ApiDetailDetail extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    education: Schema.Attribute.Component<'shared.timeline', true> &
+      Schema.Attribute.Required;
     email: Schema.Attribute.Email &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
+    experience: Schema.Attribute.Component<'shared.timeline', true> &
+      Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -439,6 +443,8 @@ export interface ApiDetailDetail extends Struct.SingleTypeSchema {
       Schema.Attribute.Unique;
     profession: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
+    skill: Schema.Attribute.Component<'shared.skill', true> &
+      Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

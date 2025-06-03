@@ -37,6 +37,24 @@
       "type": "text",
       "minLength": 10,
       "required": true
+    },
+    "education": {
+      "type": "component",
+      "component": "shared.timeline",
+      "repeatable": true,
+      "required": true
+    },
+    "experience": {
+      "type": "component",
+      "component": "shared.timeline",
+      "repeatable": true,
+      "required": true
+    },
+    "skill": {
+      "type": "component",
+      "component": "shared.skill",
+      "repeatable": true,
+      "required": true
     }
   }
 }
